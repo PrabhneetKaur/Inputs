@@ -1,0 +1,27 @@
+
+<html>
+    <head>
+        <title>DOM manupulations on selectboxes</title>
+        <script type="text/javascript">
+        function fn1()
+        {
+            var select = document.getElementById("selectbox").value;
+            alert(select.options[select.selectedIndex].value);
+
+        }
+        </script>
+    </head>
+    <body>
+        <select id ="selectbox">
+            <option value="audi">AUDI</option>
+            <!--value attribute used in alert statement is actually "value" used in the option tag-->
+            <option value="skoda">SKODA</option>
+            <option value="mclarren">MCLARREN</option>
+        </select>
+        <!--while performing reviewing this code , remember to note the difference between "value" and the actual "option" of the selectbix-->
+        <br>
+        <br>
+        <br>
+        <button onclick="fn1()">CLICK ME</button>
+    </body>
+</html>

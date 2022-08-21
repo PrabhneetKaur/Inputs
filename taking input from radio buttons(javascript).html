@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Taking input from radio buttons</title>
+        <script type="text/javascript">
+        function fn1()
+        {
+            var rd1 = document.getElementById("rd1");//var rd1 is an html element which is refering to input tag// 
+            var rd2 = document.getElementById("rd2");
+            if(rd1.checked==true)//"checked" is a property of the above html element//
+               alert("the channel selected is : " + rd1.value);//value property of this "rd1" object is mapped to "value attribute" of the "input tag"//
+
+            else if(rd2.checked==true)
+               alert("this channel selector is : " + rd2.value);
+            else
+            alert("no channel selected");  
+
+        }
+
+
+
+        </script>
+    </head>
+
+    <body>
+       <input type="radio" id="rd1" name ="grp1"value="simple Snippets">Simple Snippets</input>
+       <br>
+       <input type="radio" id="rd2" name="grp1"value="telusko" >telusko</input>
+       <!--same name is given so that we can select only one out of the two.....otherwise both of the radio buttons will be selected-->
+
+       <br>
+       <button onclick="fn1()" id="btn1">Click me</button>
+       <!--giving id to button is not necessary since we are going to use its onclick() event-->
+
+
+
+    </body>
+
+    
+
+</html>
